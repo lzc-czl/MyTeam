@@ -1,0 +1,28 @@
+//
+//  PrefixHeader.pch
+//  Demo1
+//
+//  Created by 李许康 on 16/7/22.
+//  Copyright © 2016年 lxk. All rights reserved.
+//
+
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "Header.h"
+#import "UIViewController+Public.h"
+#import "NSString+Detail.h"
+#import "UIImage+Public.h"
+#import "MJExtension.h"
+#import "UIToastView.h"
+#endif
+
+
+#ifdef DEBUG
+#define NSLog(...) NSLog(__VA_ARGS__)
+#define debugMethod() NSLog(@"%s", __func__)
+#else
+#define NSLog(...)
+#define debugMethod()
+#endif
